@@ -282,6 +282,71 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
+
+            .leadership-section {
+                padding: 3rem 0;
+            }
+
+            .authority-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .secondary-action {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .expertise-marker {
+                width: 4rem;
+                height: 4rem;
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .testimonial-executive {
+                padding: 2rem;
+            }
+
+            .executive-panel {
+                padding: 2rem !important;
+            }
+
+            .executive-header {
+                position: relative;
+            }
+
+            .navigation-item {
+                display: none;
+            }
+
+            .prestige-metric {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .leadership-section {
+                padding: 2rem 0;
+            }
+
+            .authority-button {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.875rem;
+            }
+
+            .secondary-action {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.875rem;
+            }
+
+            .testimonial-executive {
+                padding: 1.5rem;
+            }
+
+            .executive-panel {
+                padding: 1.5rem !important;
+            }
         }
     </style>
 </head>
@@ -289,17 +354,17 @@
 
     <!-- Consultation Dialog -->
     <div id="consultationDialog" class="hidden fixed inset-0 z-50 modal-overlay flex items-center justify-center p-6">
-        <div class="executive-panel max-w-lg w-full p-10 text-center rounded">
+        <div class="executive-panel max-w-lg w-full p-6 md:p-10 text-center rounded">
             <div class="expertise-marker mx-auto mb-8">
                 📞
             </div>
-            <h3 class="text-3xl font-bold text-charcoal mb-6">تواصل فوري مع خبرائنا</h3>
-            <p class="text-lg text-steel mb-10 leading-relaxed">
+            <h3 class="text-2xl md:text-3xl font-bold text-charcoal mb-6">تواصل فوري مع خبرائنا</h3>
+            <p class="text-base md:text-lg text-steel mb-10 leading-relaxed">
                 مقعدك على وشك أن يتم حجزه، أضف WhatsApp، دعنا نناقش معًا.
             </p>
             
             <div class="space-y-4">
-                <button onclick="proceedToWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded transition-all duration-300 text-lg">
+                <button onclick="proceedToWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded transition-all duration-300 text-base md:text-lg">
                     الانضمام عبر WhatsApp
                 </button>
                 <button onclick="closeContactDialog()" class="w-full bg-platinum hover:bg-smoke text-charcoal font-semibold py-4 px-8 rounded transition-all duration-300">
@@ -327,15 +392,15 @@
 
     <!-- Executive Header -->
     <header class="executive-header">
-        <div class="premium-container px-8">
-            <div class="flex justify-between items-center h-22">
-                <div class="flex items-center space-x-6 space-x-reverse">
-                    <div class="w-14 h-14 bg-copper rounded flex items-center justify-center text-ivory">
-                        <span class="font-black text-lg">TFA</span>
+        <div class="premium-container px-4 md:px-8">
+            <div class="flex justify-between items-center h-16 md:h-22">
+                <div class="flex items-center space-x-3 md:space-x-6 space-x-reverse">
+                    <div class="w-10 h-10 md:w-14 md:h-14 bg-copper rounded flex items-center justify-center text-ivory">
+                        <span class="font-black text-sm md:text-lg">TFA</span>
                     </div>
                     <div>
-                        <h1 class="text-2xl font-black text-ivory">مؤسسة التحليل المالي</h1>
-                        <p class="text-sm text-platinum font-medium">PROFESSIONAL FINANCIAL ANALYSIS</p>
+                        <h1 class="text-lg md:text-2xl font-black text-ivory">مؤسسة التحليل المالي</h1>
+                        <p class="text-xs md:text-sm text-platinum font-medium hidden md:block">PROFESSIONAL FINANCIAL ANALYSIS</p>
                     </div>
                 </div>
                 
@@ -345,7 +410,7 @@
                     <a href="#consultation" class="navigation-item">استشارة فورية</a>
                 </div>
                 
-                <button class="consultation-trigger authority-button">
+                <button class="consultation-trigger authority-button text-sm md:text-base px-3 md:px-8 py-2 md:py-4">
                     استشارة نخبة
                 </button>
             </div>
@@ -353,65 +418,65 @@
     </header>
 
     <!-- Hero Leadership Section -->
-    <section id="hero" class="leadership-section pt-30 pr-22">
-        <div class="premium-container px-8">
-            <div class="grid xl:grid-cols-5 gap-16 items-start">
+    <section id="hero" class="leadership-section pt-20 md:pt-30 pr-0 md:pr-22">
+        <div class="premium-container px-4 md:px-8">
+            <div class="grid xl:grid-cols-5 gap-8 md:gap-16 items-start">
                 
                 <!-- Primary Content Column -->
-                <div class="xl:col-span-3 space-y-12">
-                    <div class="executive-panel p-12 rounded">
-                        <h2 class="text-5xl xl:text-7xl font-black leading-tight mb-8 text-charcoal">
+                <div class="xl:col-span-3 space-y-8 md:space-y-12">
+                    <div class="executive-panel p-6 md:p-12 rounded">
+                        <h2 class="text-3xl md:text-5xl xl:text-7xl font-black leading-tight mb-6 md:mb-8 text-charcoal">
                             خدمات التحليل المالي<br>
                             <span class="text-copper">للنخبة الاستثمارية</span>
                         </h2>
-                        <p class="text-2xl text-steel leading-relaxed mb-10">
+                        <p class="text-lg md:text-2xl text-steel leading-relaxed mb-8 md:mb-10">
                             نقدم حلول استثمارية متطورة وتحليلات مالية عميقة للمستثمرين والمؤسسات الرائدة
                         </p>
                         
-                        <div class="flex flex-col lg:flex-row gap-6 mb-12">
-                            <button class="consultation-trigger authority-button">
+                        <div class="flex flex-col lg:flex-row gap-4 md:gap-6 mb-8 md:mb-12">
+                            <button class="consultation-trigger authority-button w-full lg:w-auto">
                                 بدء الاستشارة التنفيذية
                             </button>
-                            <button class="secondary-action">
+                            <button class="secondary-action w-full lg:w-auto">
                                 استكشاف خدماتنا الحصرية
                             </button>
                         </div>
 
-                        <div class="bg-graphite bg-opacity-5 p-8 rounded">
-                            <p class="text-lg text-steel leading-relaxed">
+                        <div class="bg-graphite bg-opacity-5 p-6 md:p-8 rounded">
+                            <p class="text-base md:text-lg text-steel leading-relaxed">
                                 نحن نقدم خدمات التحليل الفني والأساسي المتقدمة للأسواق المالية العالمية. خدماتنا تشمل التحليل العميق للأسواق وتقديم الاستشارات الاستراتيجية التعليمية. نؤكد أن جميع خدماتنا مخصصة للأغراض التعليمية والإرشادية فحسب.
                             </p>
                         </div>
                     </div>
 
                     <!-- Excellence Metrics -->
-                    <div class="grid grid-cols-3 gap-6">
+                    <div class="grid grid-cols-3 gap-3 md:gap-6">
                         <div class="prestige-metric">
-                            <div class="text-3xl font-black text-copper mb-3">EXPERTISE</div>
-                            <div class="text-sm text-platinum uppercase tracking-wider">خبرة متخصصة</div>
+                            <div class="text-xl md:text-3xl font-black text-copper mb-2 md:mb-3">EXPERTISE</div>
+                            <div class="text-xs md:text-sm text-platinum uppercase tracking-wider">خبرة متخصصة</div>
                         </div>
                         <div class="prestige-metric">
-                            <div class="text-3xl font-black text-copper mb-3">ANALYSIS</div>
-                            <div class="text-sm text-platinum uppercase tracking-wider">تحليل يومي</div>
+                            <div class="text-xl md:text-3xl font-black text-copper mb-2 md:mb-3">ANALYSIS</div>
+                            <div class="text-xs md:text-sm text-platinum uppercase tracking-wider">تحليل يومي</div>
                         </div>
                         <div class="prestige-metric">
-                            <div class="text-3xl font-black text-copper mb-3">SUPPORT</div>
-                            <div class="text-sm text-platinum uppercase tracking-wider">دعم شامل</div>
+                            <div class="text-xl md:text-3xl font-black text-copper mb-2 md:mb-3">SUPPORT</div>
+                            <div class="text-xs md:text-sm text-platinum uppercase tracking-wider">دعم شامل</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Visual Asset Column -->
-                <div class="xl:col-span-2 space-y-8">
-                    <div class="executive-panel p-8 rounded">
+                <div class="xl:col-span-2 space-y-6 md:space-y-8">
+                    <div class="executive-panel p-6 md:p-8 rounded">
                         <img src="img/1.jpg" 
                              alt="خدمات التحليل المالي للنخبة" 
                              class="w-full h-auto rounded">
                     </div>
                     
-                    <div class="executive-panel p-8 rounded text-center">
-                        <div class="text-copper text-4xl mb-4">📊</div>
-                        <h3 class="text-xl font-bold text-charcoal mb-4">تحليلات مؤسسية متقدمة</h3>
+                    <div class="executive-panel p-6 md:p-8 rounded text-center">
+                        <div class="text-copper text-3xl md:text-4xl mb-4">📊</div>
+                        <h3 class="text-lg md:text-xl font-bold text-charcoal mb-4">تحليلات مؤسسية متقدمة</h3>
                         <p class="text-steel leading-relaxed">
                             نستخدم أحدث أدوات التحليل والذكاء الاصطناعي لتقديم رؤى استثمارية عميقة ومدروسة
                         </p>
@@ -422,27 +487,27 @@
     </section>
 
     <!-- Professional Services Section -->
-    <section id="services" class="leadership-section corporate-background pr-22">
-        <div class="premium-container px-8">
-            <div class="text-center mb-20">
-                <h3 class="text-5xl font-black text-charcoal mb-8">
+    <section id="services" class="leadership-section corporate-background pr-0 md:pr-22">
+        <div class="premium-container px-4 md:px-8">
+            <div class="text-center mb-16 md:mb-20">
+                <h3 class="text-3xl md:text-5xl font-black text-charcoal mb-6 md:mb-8">
                     حلولنا الاستثمارية المتقدمة
                 </h3>
-                <div class="w-32 h-1 bg-copper mx-auto mb-8"></div>
-                <p class="text-2xl text-steel max-w-4xl mx-auto leading-relaxed">
+                <div class="w-24 md:w-32 h-1 bg-copper mx-auto mb-6 md:mb-8"></div>
+                <p class="text-lg md:text-2xl text-steel max-w-4xl mx-auto leading-relaxed">
                     نقدم مجموعة شاملة من الخدمات الاستشارية المتطورة والحلول التحليلية المبتكرة للمستثمرين والمؤسسات المالية
                 </p>
             </div>
 
-            <div class="grid xl:grid-cols-5 gap-16 items-start mb-20">
+            <div class="grid xl:grid-cols-5 gap-8 md:gap-16 items-start mb-16 md:mb-20">
                 
                 <!-- Services Column -->
-                <div class="xl:col-span-3 space-y-16">
-                    <div class="flex items-start space-x-8 space-x-reverse">
-                        <div class="expertise-marker flex-shrink-0">01</div>
+                <div class="xl:col-span-3 space-y-12 md:space-y-16">
+                    <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8 md:space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0 mx-auto md:mx-0">01</div>
                         <div>
-                            <h4 class="text-3xl font-bold text-charcoal mb-6">التحليل التقني المؤسسي</h4>
-                            <p class="text-xl text-steel leading-relaxed mb-6">
+                            <h4 class="text-2xl md:text-3xl font-bold text-charcoal mb-4 md:mb-6">التحليل التقني المؤسسي</h4>
+                            <p class="text-lg md:text-xl text-steel leading-relaxed mb-4 md:mb-6">
                                 نوفر تحليلات تقنية شاملة ومتقدمة للأسواق المالية العالمية باستخدام أحدث الأدوات والمؤشرات التحليلية المبتكرة والذكاء الاصطناعي لأغراض تعليمية وإعلامية متخصصة.
                             </p>
                             <ul class="space-y-3 text-steel">
@@ -462,11 +527,11 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-8 space-x-reverse">
-                        <div class="expertise-marker flex-shrink-0">02</div>
+                    <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8 md:space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0 mx-auto md:mx-0">02</div>
                         <div>
-                            <h4 class="text-3xl font-bold text-charcoal mb-6">البرامج التعليمية التنفيذية</h4>
-                            <p class="text-xl text-steel leading-relaxed mb-6">
+                            <h4 class="text-2xl md:text-3xl font-bold text-charcoal mb-4 md:mb-6">البرامج التعليمية التنفيذية</h4>
+                            <p class="text-lg md:text-xl text-steel leading-relaxed mb-4 md:mb-6">
                                 نقدم محتوى تعليمي متخصص وشامل حول أسس الاستثمار المتقدم والتحليل المالي المؤسسي لبناء قاعدة معرفية قوية ومتينة للمستثمرين المتقدمين.
                             </p>
                             <ul class="space-y-3 text-steel">
@@ -486,11 +551,11 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-8 space-x-reverse">
-                        <div class="expertise-marker flex-shrink-0">03</div>
+                    <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8 md:space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0 mx-auto md:mx-0">03</div>
                         <div>
-                            <h4 class="text-3xl font-bold text-charcoal mb-6">الاستشارات الاستراتيجية</h4>
-                            <p class="text-xl text-steel leading-relaxed mb-6">
+                            <h4 class="text-2xl md:text-3xl font-bold text-charcoal mb-4 md:mb-6">الاستشارات الاستراتيجية</h4>
+                            <p class="text-lg md:text-xl text-steel leading-relaxed mb-4 md:mb-6">
                                 نوفر استشارات توجيهية متخصصة وإرشادات استراتيجية شاملة حول اتجاهات الأسواق المالية مع التأكيد على أهمية إجراء البحث الشخصي المستقل والمدروس.
                             </p>
                             <ul class="space-y-3 text-steel">
@@ -513,13 +578,13 @@
 
                 <!-- Visual Column -->
                 <div class="xl:col-span-2">
-                    <div class="executive-panel p-10 rounded">
+                    <div class="executive-panel p-6 md:p-10 rounded">
                         <img src="img/11.jpg" 
                              alt="أدوات التحليل المالي المتقدمة" 
                              class="w-full h-auto rounded">
-                        <div class="mt-8 p-6 bg-graphite bg-opacity-5 rounded">
-                            <h4 class="text-lg font-bold text-charcoal mb-3">منصة تحليل متطورة</h4>
-                            <p class="text-steel">
+                        <div class="mt-6 md:mt-8 p-4 md:p-6 bg-graphite bg-opacity-5 rounded">
+                            <h4 class="text-base md:text-lg font-bold text-charcoal mb-3">منصة تحليل متطورة</h4>
+                            <p class="text-steel text-sm md:text-base">
                                 نستخدم أحدث التقنيات والأدوات المالية لتقديم تحليلات دقيقة وشاملة
                             </p>
                         </div>
@@ -530,61 +595,61 @@
     </section>
 
     <!-- Executive Testimonials -->
-    <section id="testimonials" class="leadership-section pr-22">
-        <div class="premium-container px-8">
-            <div class="text-center mb-20">
-                <h3 class="text-5xl font-black text-ivory mb-8">
+    <section id="testimonials" class="leadership-section pr-0 md:pr-22">
+        <div class="premium-container px-4 md:px-8">
+            <div class="text-center mb-16 md:mb-20">
+                <h3 class="text-3xl md:text-5xl font-black text-ivory mb-6 md:mb-8">
                     شهادات العملاء المتميزين
                 </h3>
-                <div class="w-32 h-1 bg-copper mx-auto mb-8"></div>
-                <p class="text-2xl text-platinum">تجارب حقيقية من المستفيدين من خدماتنا المتخصصة والحصرية</p>
+                <div class="w-24 md:w-32 h-1 bg-copper mx-auto mb-6 md:mb-8"></div>
+                <p class="text-lg md:text-2xl text-platinum">تجارب حقيقية من المستفيدين من خدماتنا المتخصصة والحصرية</p>
             </div>
             
-            <div class="grid lg:grid-cols-3 gap-10">
+            <div class="grid lg:grid-cols-3 gap-6 md:gap-10">
                 <div class="testimonial-executive">
-                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 md:space-x-reverse mb-6 md:mb-8">
                         <img src="img/tx(11).png" 
                              alt="عميل تنفيذي 1" 
-                             class="w-20 h-20 rounded border-2 border-copper">
-                        <div>
-                            <h4 class="font-bold text-2xl text-charcoal">أحمد الراشد</h4>
-                            <div class="text-steel font-medium">المدير التنفيذي للاستثمارات</div>
-                            <div class="text-copper text-sm font-semibold">شركة الخليج المالية</div>
+                             class="w-16 h-16 md:w-20 md:h-20 rounded border-2 border-copper object-cover flex-shrink-0">
+                        <div class="text-center md:text-right">
+                            <h4 class="font-bold text-xl md:text-2xl text-charcoal">أحمد الراشد</h4>
+                            <div class="text-steel font-medium text-sm md:text-base">المدير التنفيذي للاستثمارات</div>
+                            <div class="text-copper text-xs md:text-sm font-semibold">شركة الخليج المالية</div>
                         </div>
                     </div>
-                    <p class="text-steel text-lg leading-relaxed">
+                    <p class="text-steel text-base md:text-lg leading-relaxed">
                         "الخدمات الاستشارية المقدمة تتسم بالمهنية العالية والدقة المتناهية. لقد ساهمت بشكل كبير في تطوير استراتيجياتنا الاستثمارية وتعميق فهمنا للأسواق المالية الإقليمية والعالمية."
                     </p>
                 </div>
                 
                 <div class="testimonial-executive">
-                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 md:space-x-reverse mb-6 md:mb-8">
                         <img src="img/tx(22).png" 
                              alt="عميل تنفيذي 2" 
-                             class="w-20 h-20 rounded border-2 border-copper">
-                        <div>
-                            <h4 class="font-bold text-2xl text-charcoal">سارة الأحمد</h4>
-                            <div class="text-steel font-medium">رئيس قسم التحليل المالي</div>
-                            <div class="text-copper text-sm font-semibold">مجموعة الاستثمار الوطني</div>
+                             class="w-16 h-16 md:w-20 md:h-20 rounded border-2 border-copper object-cover flex-shrink-0">
+                        <div class="text-center md:text-right">
+                            <h4 class="font-bold text-xl md:text-2xl text-charcoal">سارة الأحمد</h4>
+                            <div class="text-steel font-medium text-sm md:text-base">رئيس قسم التحليل المالي</div>
+                            <div class="text-copper text-xs md:text-sm font-semibold">مجموعة الاستثمار الوطني</div>
                         </div>
                     </div>
-                    <p class="text-steel text-lg leading-relaxed">
+                    <p class="text-steel text-base md:text-lg leading-relaxed">
                         "المحتوى التعليمي والتحليلي المتقدم الذي يقدمه الفريق يتميز بالعمق والشمولية. لقد استفدنا بشكل استثنائي من التحليلات والرؤى المهنية المتخصصة التي ساعدتنا في اتخاذ قرارات استثمارية مدروسة."
                     </p>
                 </div>
                 
                 <div class="testimonial-executive">
-                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 md:space-x-reverse mb-6 md:mb-8">
                         <img src="img/tx(33).png" 
                              alt="عميل تنفيذي 3" 
-                             class="w-20 h-20 rounded border-2 border-copper">
-                        <div>
-                            <h4 class="font-bold text-2xl text-charcoal">محمد العتيبي</h4>
-                            <div class="text-steel font-medium">مؤسس ورئيس مجلس الإدارة</div>
-                            <div class="text-copper text-sm font-semibold">مجموعة الأعمال المتقدمة</div>
+                             class="w-16 h-16 md:w-20 md:h-20 rounded border-2 border-copper object-cover flex-shrink-0">
+                        <div class="text-center md:text-right">
+                            <h4 class="font-bold text-xl md:text-2xl text-charcoal">محمد العتيبي</h4>
+                            <div class="text-steel font-medium text-sm md:text-base">مؤسس ورئيس مجلس الإدارة</div>
+                            <div class="text-copper text-xs md:text-sm font-semibold">مجموعة الأعمال المتقدمة</div>
                         </div>
                     </div>
-                    <p class="text-steel text-lg leading-relaxed">
+                    <p class="text-steel text-base md:text-lg leading-relaxed">
                         "فريق محترف ومتخصص يقدم خدمات استشارية عالية الجودة ومتميزة. أنصح بشدة بالاستفادة من خبرتهم الواسعة وتجربتهم العملية في مجال الأسواق المالية والاستثمار الاستراتيجي."
                     </p>
                 </div>
@@ -593,35 +658,35 @@
     </section>
 
     <!-- Executive Consultation Section -->
-    <section id="consultation" class="leadership-section corporate-background pr-22">
-        <div class="premium-container px-8">
+    <section id="consultation" class="leadership-section corporate-background pr-0 md:pr-22">
+        <div class="premium-container px-4 md:px-8">
             <div class="max-w-5xl mx-auto text-center">
-                <h3 class="text-5xl font-black text-charcoal mb-10">
+                <h3 class="text-3xl md:text-5xl font-black text-charcoal mb-8 md:mb-10">
                     ابدأ رحلتك الاستثمارية مع النخبة
                 </h3>
-                <p class="text-2xl text-steel mb-16 leading-relaxed">
+                <p class="text-lg md:text-2xl text-steel mb-12 md:mb-16 leading-relaxed">
                     احصل على استشارة تنفيذية مجانية واكتشف كيف يمكن لحلولنا المتخصصة أن تعزز من معرفتك وفهمك العميق للأسواق المالية العالمية
                 </p>
                 
-                <div class="executive-panel p-16 rounded mb-16">
-                    <div class="text-copper text-6xl mb-8">🎯</div>
-                    <h4 class="text-3xl font-bold text-charcoal mb-6">استشارة تنفيذية حصرية</h4>
-                    <p class="text-xl text-steel mb-12 leading-relaxed max-w-3xl mx-auto">
+                <div class="executive-panel p-8 md:p-16 rounded mb-12 md:mb-16">
+                    <div class="text-copper text-4xl md:text-6xl mb-6 md:mb-8">🎯</div>
+                    <h4 class="text-2xl md:text-3xl font-bold text-charcoal mb-4 md:mb-6">استشارة تنفيذية حصرية</h4>
+                    <p class="text-lg md:text-xl text-steel mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto">
                         احجز جلسة استشارية مخصصة مع فريق الخبراء المتخصصين لدينا واحصل على رؤى استثمارية متقدمة ومخصصة لاحتياجاتك الفردية والمؤسسية
                     </p>
                     
-                    <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
-                        <button class="consultation-trigger authority-button text-xl px-16 py-6">
+                    <div class="flex flex-col lg:flex-row gap-6 md:gap-8 justify-center items-center">
+                        <button class="consultation-trigger authority-button text-lg md:text-xl px-8 md:px-16 py-4 md:py-6 w-full lg:w-auto">
                             احجز استشارتك التنفيذية المجانية
                         </button>
-                        <div class="text-steel">
+                        <div class="text-steel text-center lg:text-right">
                             <div class="font-semibold">متاح الآن</div>
                             <div class="text-sm">جلسات حصرية محدودة</div>
                         </div>
                     </div>
                 </div>
                 
-                <p class="text-steel text-sm">
+                <p class="text-steel text-xs md:text-sm">
                     إشعار هام: جميع خدماتنا استشارية وتعليمية حصرياً. الاستثمار في الأسواق المالية يحمل مخاطر مالية كبيرة.
                 </p>
             </div>
@@ -629,35 +694,35 @@
     </section>
 
     <!-- Risk Disclosure -->
-    <section class="py-20 bg-red-50 mx-8 mr-30 rounded my-12">
-        <div class="premium-container px-8">
-            <div class="executive-panel border-red-200 p-12 rounded">
-                <div class="text-center mb-12">
-                    <div class="w-24 h-24 bg-red-500 rounded flex items-center justify-center mx-auto mb-6">
-                        <span class="text-white text-3xl">⚠️</span>
+    <section class="py-12 md:py-20 bg-red-50 mx-4 md:mx-8 mr-4 md:mr-30 rounded my-8 md:my-12">
+        <div class="premium-container px-4 md:px-8">
+            <div class="executive-panel border-red-200 p-6 md:p-12 rounded">
+                <div class="text-center mb-8 md:mb-12">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-red-500 rounded flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <span class="text-white text-2xl md:text-3xl">⚠️</span>
                     </div>
-                    <h3 class="text-3xl font-bold text-red-600">إفصاح المخاطر والمسؤوليات التنظيمية</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold text-red-600">إفصاح المخاطر والمسؤوليات التنظيمية</h3>
                 </div>
                 
-                <div class="grid lg:grid-cols-2 gap-12 text-steel">
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded">
-                            <h4 class="font-bold text-red-600 mb-3 text-lg">طبيعة الخدمات المقدمة</h4>
-                            <p class="leading-relaxed">جميع خدماتنا استشارية وتعليمية حصرياً ولا تشكل نصائح استثمارية مباشرة أو توصيات مالية للشراء أو البيع أو الاحتفاظ بأي أوراق مالية.</p>
+                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 text-steel">
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="bg-red-50 p-4 md:p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-base md:text-lg">طبيعة الخدمات المقدمة</h4>
+                            <p class="leading-relaxed text-sm md:text-base">جميع خدماتنا استشارية وتعليمية حصرياً ولا تشكل نصائح استثمارية مباشرة أو توصيات مالية للشراء أو البيع أو الاحتفاظ بأي أوراق مالية.</p>
                         </div>
-                        <div class="bg-red-50 p-6 rounded">
-                            <h4 class="font-bold text-red-600 mb-3 text-lg">المخاطر المالية الجوهرية</h4>
-                            <p class="leading-relaxed">الاستثمار في الأسواق المالية والأدوات المالية المختلفة يحمل مخاطر عالية وكبيرة قد تؤدي إلى خسائر مالية جسيمة تصل إلى كامل رأس المال المستثمر وأكثر.</p>
+                        <div class="bg-red-50 p-4 md:p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-base md:text-lg">المخاطر المالية الجوهرية</h4>
+                            <p class="leading-relaxed text-sm md:text-base">الاستثمار في الأسواق المالية والأدوات المالية المختلفة يحمل مخاطر عالية وكبيرة قد تؤدي إلى خسائر مالية جسيمة تصل إلى كامل رأس المال المستثمر وأكثر.</p>
                         </div>
                     </div>
-                    <div class="space-y-6">
-                        <div class="bg-red-50 p-6 rounded">
-                            <h4 class="font-bold text-red-600 mb-3 text-lg">المسؤولية الشخصية الكاملة</h4>
-                            <p class="leading-relaxed">العميل والمستخدم يتحمل المسؤولية الكاملة والشخصية عن جميع قراراته الاستثمارية والمالية ونتائجها وتبعاتها دون أي استثناء.</p>
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="bg-red-50 p-4 md:p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-base md:text-lg">المسؤولية الشخصية الكاملة</h4>
+                            <p class="leading-relaxed text-sm md:text-base">العميل والمستخدم يتحمل المسؤولية الكاملة والشخصية عن جميع قراراته الاستثمارية والمالية ونتائجها وتبعاتها دون أي استثناء.</p>
                         </div>
-                        <div class="bg-red-50 p-6 rounded">
-                            <h4 class="font-bold text-red-600 mb-3 text-lg">عدم وجود ضمانات مالية</h4>
-                            <p class="leading-relaxed">لا نقدم أي ضمانات أو تعهدات أو وعود حول الأرباح المستقبلية أو نتائج الاستثمار أو أداء الأسواق أو أي عوائد استثمارية مستقبلية.</p>
+                        <div class="bg-red-50 p-4 md:p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-base md:text-lg">عدم وجود ضمانات مالية</h4>
+                            <p class="leading-relaxed text-sm md:text-base">لا نقدم أي ضمانات أو تعهدات أو وعود حول الأرباح المستقبلية أو نتائج الاستثمار أو أداء الأسواق أو أي عوائد استثمارية مستقبلية.</p>
                         </div>
                     </div>
                 </div>
@@ -666,23 +731,23 @@
     </section>
 
     <!-- Corporate Footer -->
-    <footer class="bg-charcoal py-20 mr-22">
-        <div class="premium-container px-8">
-            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+    <footer class="bg-charcoal py-12 md:py-20 mr-0 md:mr-22">
+        <div class="premium-container px-4 md:px-8">
+            <div class="grid lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
                 <div class="lg:col-span-2">
-                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
-                        <div class="w-20 h-20 bg-copper rounded flex items-center justify-center text-ivory">
-                            <span class="font-black text-2xl">TFA</span>
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 md:space-x-reverse mb-6 md:mb-8">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-copper rounded flex items-center justify-center text-ivory">
+                            <span class="font-black text-lg md:text-2xl">TFA</span>
                         </div>
-                        <div>
-                            <h3 class="text-3xl font-black text-ivory">مؤسسة التحليل المالي</h3>
-                            <p class="text-platinum font-medium">PROFESSIONAL FINANCIAL ANALYSIS INSTITUTE</p>
+                        <div class="text-center md:text-right">
+                            <h3 class="text-2xl md:text-3xl font-black text-ivory">مؤسسة التحليل المالي</h3>
+                            <p class="text-platinum font-medium text-sm md:text-base">PROFESSIONAL FINANCIAL ANALYSIS INSTITUTE</p>
                         </div>
                     </div>
-                    <p class="text-xl text-platinum leading-relaxed mb-8">
+                    <p class="text-lg md:text-xl text-platinum leading-relaxed mb-6 md:mb-8 text-center md:text-right">
                         نقدم خدمات استشارية وتعليمية متطورة ومتخصصة في مجال الأسواق المالية والاستثمار المؤسسي. جميع خدماتنا مخصصة للأغراض التعليمية والإعلامية حصرياً ولا تشكل نصائح استثمارية مباشرة.
                     </p>
-                    <div class="flex space-x-4 space-x-reverse">
+                    <div class="flex justify-center md:justify-start space-x-4 space-x-reverse">
                         <button class="consultation-trigger authority-button">
                             استشارة فورية
                         </button>
@@ -690,8 +755,8 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-8 text-xl text-copper uppercase tracking-wider">خدماتنا المتخصصة</h4>
-                    <ul class="space-y-4 text-platinum">
+                    <h4 class="font-bold mb-6 md:mb-8 text-lg md:text-xl text-copper uppercase tracking-wider text-center md:text-right">خدماتنا المتخصصة</h4>
+                    <ul class="space-y-3 md:space-y-4 text-platinum text-center md:text-right">
                         <li class="hover:text-copper transition-colors cursor-pointer">التحليل التقني المتقدم</li>
                         <li class="hover:text-copper transition-colors cursor-pointer">البرامج التعليمية التنفيذية</li>
                         <li class="hover:text-copper transition-colors cursor-pointer">الاستشارات الاستراتيجية</li>
@@ -700,8 +765,8 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-8 text-xl text-copper uppercase tracking-wider">المعلومات القانونية</h4>
-                    <ul class="space-y-4 text-platinum">
+                    <h4 class="font-bold mb-6 md:mb-8 text-lg md:text-xl text-copper uppercase tracking-wider text-center md:text-right">المعلومات القانونية</h4>
+                    <ul class="space-y-3 md:space-y-4 text-platinum text-center md:text-right">
                         <li><a href="ys.html" class="hover:text-copper transition-colors">سياسة الخصوصية والأمان</a></li>
                         <li><a href="#" class="hover:text-copper transition-colors">شروط الاستخدام والخدمة</a></li>
                         <li><a href="#" class="hover:text-copper transition-colors">إخلاء المسؤولية الكامل</a></li>
@@ -710,9 +775,9 @@
                 </div>
             </div>
             
-            <div class="border-t border-steel pt-12 text-center">
-                <p class="text-platinum mb-6 text-lg">&copy; 2025 مؤسسة التحليل المالي الاحترافي. جميع الحقوق محفوظة قانونياً.</p>
-                <div class="flex justify-center space-x-12 space-x-reverse text-sm uppercase tracking-wider">
+            <div class="border-t border-steel pt-8 md:pt-12 text-center">
+                <p class="text-platinum mb-4 md:mb-6 text-base md:text-lg">&copy; 2025 مؤسسة التحليل المالي الاحترافي. جميع الحقوق محفوظة قانونياً.</p>
+                <div class="flex flex-wrap justify-center gap-6 md:gap-12 text-sm uppercase tracking-wider">
                     <a href="ys.html" class="text-copper hover:text-ivory transition-colors font-semibold">الخصوصية</a>
                     <a href="#" class="text-copper hover:text-ivory transition-colors font-semibold">الشروط</a>
                     <a href="#" class="text-copper hover:text-ivory transition-colors font-semibold">المسؤولية</a>
