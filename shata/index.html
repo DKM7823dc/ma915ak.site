@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة التحليل المالي الاحترافي | خدمات النخبة الاستثمارية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'platinum': '#E5E7EB',
+                        'charcoal': '#111827',
+                        'graphite': '#1F2937',
+                        'steel': '#374151',
+                        'bronze': '#92400E',
+                        'copper': '#D97706',
+                        'ivory': '#FEFEFE',
+                        'smoke': '#6B7280'
+                    },
+                    fontFamily: {
+                        'arabic': ['Noto Sans Arabic', 'sans-serif']
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                        '26': '6.5rem',
+                        '30': '7.5rem'
+                    }
+                }
+            }
+        }
+
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        function openContactDialog() {
+            document.getElementById('consultationDialog').classList.remove('hidden');
+        }
+
+        function closeContactDialog() {
+            document.getElementById('consultationDialog').classList.add('hidden');
+        }
+
+        function proceedToWhatsApp() {
+            window.open('https://www.qq.com', '_blank');
+            closeContactDialog();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.consultation-trigger').forEach(element => {
+                element.addEventListener('click', openContactDialog);
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background: linear-gradient(180deg, #111827 0%, #1F2937 50%, #374151 100%);
+            background-attachment: fixed;
+        }
+
+        .premium-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .executive-panel {
+            background: linear-gradient(145deg, #FEFEFE 0%, #F9FAFB 100%);
+            border: 1px solid #E5E7EB;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            color: #111827;
+        }
+
+        .leadership-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .executive-header {
+            background: linear-gradient(135deg, #111827 0%, #1F2937 50%, #374151 100%);
+            border-bottom: 2px solid #D97706;
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+
+        .authority-button {
+            background: linear-gradient(135deg, #D97706 0%, #92400E 100%);
+            color: #FEFEFE;
+            border: none;
+            padding: 1.25rem 3rem;
+            border-radius: 0.25rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.25);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .authority-button:hover {
+            background: linear-gradient(135deg, #92400E 0%, #7C2D12 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(217, 119, 6, 0.35);
+        }
+
+        .secondary-action {
+            background: transparent;
+            color: #D97706;
+            border: 2px solid #D97706;
+            padding: 1.25rem 3rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .secondary-action:hover {
+            background: #D97706;
+            color: #FEFEFE;
+            transform: translateY(-1px);
+        }
+
+        .navigation-item {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.875rem;
+        }
+
+        .navigation-item:hover {
+            color: #D97706;
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(-2px);
+        }
+
+        .expertise-marker {
+            background: linear-gradient(135deg, #D97706 0%, #92400E 100%);
+            color: #FEFEFE;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.2);
+        }
+
+        .prestige-metric {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            border-radius: 0.25rem;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+        }
+
+        .prestige-metric:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(217, 119, 6, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-executive {
+            background: #FEFEFE;
+            border-right: 6px solid #D97706;
+            border-radius: 0.25rem;
+            padding: 3rem;
+            color: #111827;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-executive:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .corporate-background {
+            background: #F9FAFB;
+            color: #111827;
+            position: relative;
+        }
+
+        .corporate-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #D97706, transparent);
+        }
+
+        .modal-overlay {
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(8px);
+        }
+
+        .sidebar-navigation {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 80px;
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(217, 119, 6, 0.2);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            gap: 2rem;
+        }
+
+        .nav-indicator {
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-indicator:hover,
+        .nav-indicator.active {
+            background: #D97706;
+            transform: scale(2);
+        }
+
+        /* RTL Adjustments */
+        [dir="rtl"] .space-x-4 > * + * {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+        
+        [dir="rtl"] .space-x-6 > * + * {
+            margin-left: 0;
+            margin-right: 1.5rem;
+        }
+
+        [dir="rtl"] .space-x-8 > * + * {
+            margin-left: 0;
+            margin-right: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar-navigation {
+                display: none;
+            }
+            
+            .premium-container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-arabic text-ivory">
+
+    <!-- Consultation Dialog -->
+    <div id="consultationDialog" class="hidden fixed inset-0 z-50 modal-overlay flex items-center justify-center p-6">
+        <div class="executive-panel max-w-lg w-full p-10 text-center rounded">
+            <div class="expertise-marker mx-auto mb-8">
+                📞
+            </div>
+            <h3 class="text-3xl font-bold text-charcoal mb-6">تواصل فوري مع خبرائنا</h3>
+            <p class="text-lg text-steel mb-10 leading-relaxed">
+                مقعدك على وشك أن يتم حجزه، أضف WhatsApp، دعنا نناقش معًا.
+            </p>
+            
+            <div class="space-y-4">
+                <button onclick="proceedToWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded transition-all duration-300 text-lg">
+                    الانضمام عبر WhatsApp
+                </button>
+                <button onclick="closeContactDialog()" class="w-full bg-platinum hover:bg-smoke text-charcoal font-semibold py-4 px-8 rounded transition-all duration-300">
+                    إغلاق
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-navigation">
+        <div class="w-12 h-12 bg-copper rounded flex items-center justify-center text-ivory font-black text-sm">
+            TFA
+        </div>
+        <div class="flex flex-col gap-6 mt-8">
+            <div class="nav-indicator active" data-section="hero"></div>
+            <div class="nav-indicator" data-section="services"></div>
+            <div class="nav-indicator" data-section="testimonials"></div>
+            <div class="nav-indicator" data-section="consultation"></div>
+        </div>
+        <button class="consultation-trigger w-12 h-12 bg-copper hover:bg-bronze rounded text-ivory font-bold mt-auto mb-4 transition-all duration-300 hover:scale-110">
+            📋
+        </button>
+    </div>
+
+    <!-- Executive Header -->
+    <header class="executive-header">
+        <div class="premium-container px-8">
+            <div class="flex justify-between items-center h-22">
+                <div class="flex items-center space-x-6 space-x-reverse">
+                    <div class="w-14 h-14 bg-copper rounded flex items-center justify-center text-ivory">
+                        <span class="font-black text-lg">TFA</span>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black text-ivory">مؤسسة التحليل المالي</h1>
+                        <p class="text-sm text-platinum font-medium">PROFESSIONAL FINANCIAL ANALYSIS</p>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#services" class="navigation-item">خدماتنا المتقدمة</a>
+                    <a href="#testimonials" class="navigation-item">شهادات العملاء</a>
+                    <a href="#consultation" class="navigation-item">استشارة فورية</a>
+                </div>
+                
+                <button class="consultation-trigger authority-button">
+                    استشارة نخبة
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Leadership Section -->
+    <section id="hero" class="leadership-section pt-30 pr-22">
+        <div class="premium-container px-8">
+            <div class="grid xl:grid-cols-5 gap-16 items-start">
+                
+                <!-- Primary Content Column -->
+                <div class="xl:col-span-3 space-y-12">
+                    <div class="executive-panel p-12 rounded">
+                        <h2 class="text-5xl xl:text-7xl font-black leading-tight mb-8 text-charcoal">
+                            خدمات التحليل المالي<br>
+                            <span class="text-copper">للنخبة الاستثمارية</span>
+                        </h2>
+                        <p class="text-2xl text-steel leading-relaxed mb-10">
+                            نقدم حلول استثمارية متطورة وتحليلات مالية عميقة للمستثمرين والمؤسسات الرائدة
+                        </p>
+                        
+                        <div class="flex flex-col lg:flex-row gap-6 mb-12">
+                            <button class="consultation-trigger authority-button">
+                                بدء الاستشارة التنفيذية
+                            </button>
+                            <button class="secondary-action">
+                                استكشاف خدماتنا الحصرية
+                            </button>
+                        </div>
+
+                        <div class="bg-graphite bg-opacity-5 p-8 rounded">
+                            <p class="text-lg text-steel leading-relaxed">
+                                نحن نقدم خدمات التحليل الفني والأساسي المتقدمة للأسواق المالية العالمية. خدماتنا تشمل التحليل العميق للأسواق وتقديم الاستشارات الاستراتيجية التعليمية. نؤكد أن جميع خدماتنا مخصصة للأغراض التعليمية والإرشادية فحسب.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Excellence Metrics -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="prestige-metric">
+                            <div class="text-3xl font-black text-copper mb-3">EXPERTISE</div>
+                            <div class="text-sm text-platinum uppercase tracking-wider">خبرة متخصصة</div>
+                        </div>
+                        <div class="prestige-metric">
+                            <div class="text-3xl font-black text-copper mb-3">ANALYSIS</div>
+                            <div class="text-sm text-platinum uppercase tracking-wider">تحليل يومي</div>
+                        </div>
+                        <div class="prestige-metric">
+                            <div class="text-3xl font-black text-copper mb-3">SUPPORT</div>
+                            <div class="text-sm text-platinum uppercase tracking-wider">دعم شامل</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Asset Column -->
+                <div class="xl:col-span-2 space-y-8">
+                    <div class="executive-panel p-8 rounded">
+                        <img src="img/1.jpg" 
+                             alt="خدمات التحليل المالي للنخبة" 
+                             class="w-full h-auto rounded">
+                    </div>
+                    
+                    <div class="executive-panel p-8 rounded text-center">
+                        <div class="text-copper text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold text-charcoal mb-4">تحليلات مؤسسية متقدمة</h3>
+                        <p class="text-steel leading-relaxed">
+                            نستخدم أحدث أدوات التحليل والذكاء الاصطناعي لتقديم رؤى استثمارية عميقة ومدروسة
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Services Section -->
+    <section id="services" class="leadership-section corporate-background pr-22">
+        <div class="premium-container px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-black text-charcoal mb-8">
+                    حلولنا الاستثمارية المتقدمة
+                </h3>
+                <div class="w-32 h-1 bg-copper mx-auto mb-8"></div>
+                <p class="text-2xl text-steel max-w-4xl mx-auto leading-relaxed">
+                    نقدم مجموعة شاملة من الخدمات الاستشارية المتطورة والحلول التحليلية المبتكرة للمستثمرين والمؤسسات المالية
+                </p>
+            </div>
+
+            <div class="grid xl:grid-cols-5 gap-16 items-start mb-20">
+                
+                <!-- Services Column -->
+                <div class="xl:col-span-3 space-y-16">
+                    <div class="flex items-start space-x-8 space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0">01</div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-charcoal mb-6">التحليل التقني المؤسسي</h4>
+                            <p class="text-xl text-steel leading-relaxed mb-6">
+                                نوفر تحليلات تقنية شاملة ومتقدمة للأسواق المالية العالمية باستخدام أحدث الأدوات والمؤشرات التحليلية المبتكرة والذكاء الاصطناعي لأغراض تعليمية وإعلامية متخصصة.
+                            </p>
+                            <ul class="space-y-3 text-steel">
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>تحليل المؤشرات التقنية المتقدمة</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>دراسة أنماط الرسوم البيانية</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>تحليل الدعم والمقاومة</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-8 space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0">02</div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-charcoal mb-6">البرامج التعليمية التنفيذية</h4>
+                            <p class="text-xl text-steel leading-relaxed mb-6">
+                                نقدم محتوى تعليمي متخصص وشامل حول أسس الاستثمار المتقدم والتحليل المالي المؤسسي لبناء قاعدة معرفية قوية ومتينة للمستثمرين المتقدمين.
+                            </p>
+                            <ul class="space-y-3 text-steel">
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>ورش عمل تفاعلية متقدمة</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>دراسة حالات استثمارية حقيقية</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>محاضرات من خبراء عالميين</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-8 space-x-reverse">
+                        <div class="expertise-marker flex-shrink-0">03</div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-charcoal mb-6">الاستشارات الاستراتيجية</h4>
+                            <p class="text-xl text-steel leading-relaxed mb-6">
+                                نوفر استشارات توجيهية متخصصة وإرشادات استراتيجية شاملة حول اتجاهات الأسواق المالية مع التأكيد على أهمية إجراء البحث الشخصي المستقل والمدروس.
+                            </p>
+                            <ul class="space-y-3 text-steel">
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>جلسات استشارية فردية</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>تقارير دورية مخصصة</span>
+                                </li>
+                                <li class="flex items-center space-x-3 space-x-reverse">
+                                    <span class="w-2 h-2 bg-copper rounded-full"></span>
+                                    <span>متابعة مستمرة للمحافظ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Column -->
+                <div class="xl:col-span-2">
+                    <div class="executive-panel p-10 rounded">
+                        <img src="img/11.jpg" 
+                             alt="أدوات التحليل المالي المتقدمة" 
+                             class="w-full h-auto rounded">
+                        <div class="mt-8 p-6 bg-graphite bg-opacity-5 rounded">
+                            <h4 class="text-lg font-bold text-charcoal mb-3">منصة تحليل متطورة</h4>
+                            <p class="text-steel">
+                                نستخدم أحدث التقنيات والأدوات المالية لتقديم تحليلات دقيقة وشاملة
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Testimonials -->
+    <section id="testimonials" class="leadership-section pr-22">
+        <div class="premium-container px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-5xl font-black text-ivory mb-8">
+                    شهادات العملاء المتميزين
+                </h3>
+                <div class="w-32 h-1 bg-copper mx-auto mb-8"></div>
+                <p class="text-2xl text-platinum">تجارب حقيقية من المستفيدين من خدماتنا المتخصصة والحصرية</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="testimonial-executive">
+                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                        <img src="img/tx(11).png" 
+                             alt="عميل تنفيذي 1" 
+                             class="w-20 h-20 rounded border-2 border-copper">
+                        <div>
+                            <h4 class="font-bold text-2xl text-charcoal">أحمد الراشد</h4>
+                            <div class="text-steel font-medium">المدير التنفيذي للاستثمارات</div>
+                            <div class="text-copper text-sm font-semibold">شركة الخليج المالية</div>
+                        </div>
+                    </div>
+                    <p class="text-steel text-lg leading-relaxed">
+                        "الخدمات الاستشارية المقدمة تتسم بالمهنية العالية والدقة المتناهية. لقد ساهمت بشكل كبير في تطوير استراتيجياتنا الاستثمارية وتعميق فهمنا للأسواق المالية الإقليمية والعالمية."
+                    </p>
+                </div>
+                
+                <div class="testimonial-executive">
+                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                        <img src="img/tx(22).png" 
+                             alt="عميل تنفيذي 2" 
+                             class="w-20 h-20 rounded border-2 border-copper">
+                        <div>
+                            <h4 class="font-bold text-2xl text-charcoal">سارة الأحمد</h4>
+                            <div class="text-steel font-medium">رئيس قسم التحليل المالي</div>
+                            <div class="text-copper text-sm font-semibold">مجموعة الاستثمار الوطني</div>
+                        </div>
+                    </div>
+                    <p class="text-steel text-lg leading-relaxed">
+                        "المحتوى التعليمي والتحليلي المتقدم الذي يقدمه الفريق يتميز بالعمق والشمولية. لقد استفدنا بشكل استثنائي من التحليلات والرؤى المهنية المتخصصة التي ساعدتنا في اتخاذ قرارات استثمارية مدروسة."
+                    </p>
+                </div>
+                
+                <div class="testimonial-executive">
+                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                        <img src="img/tx(33).png" 
+                             alt="عميل تنفيذي 3" 
+                             class="w-20 h-20 rounded border-2 border-copper">
+                        <div>
+                            <h4 class="font-bold text-2xl text-charcoal">محمد العتيبي</h4>
+                            <div class="text-steel font-medium">مؤسس ورئيس مجلس الإدارة</div>
+                            <div class="text-copper text-sm font-semibold">مجموعة الأعمال المتقدمة</div>
+                        </div>
+                    </div>
+                    <p class="text-steel text-lg leading-relaxed">
+                        "فريق محترف ومتخصص يقدم خدمات استشارية عالية الجودة ومتميزة. أنصح بشدة بالاستفادة من خبرتهم الواسعة وتجربتهم العملية في مجال الأسواق المالية والاستثمار الاستراتيجي."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Consultation Section -->
+    <section id="consultation" class="leadership-section corporate-background pr-22">
+        <div class="premium-container px-8">
+            <div class="max-w-5xl mx-auto text-center">
+                <h3 class="text-5xl font-black text-charcoal mb-10">
+                    ابدأ رحلتك الاستثمارية مع النخبة
+                </h3>
+                <p class="text-2xl text-steel mb-16 leading-relaxed">
+                    احصل على استشارة تنفيذية مجانية واكتشف كيف يمكن لحلولنا المتخصصة أن تعزز من معرفتك وفهمك العميق للأسواق المالية العالمية
+                </p>
+                
+                <div class="executive-panel p-16 rounded mb-16">
+                    <div class="text-copper text-6xl mb-8">🎯</div>
+                    <h4 class="text-3xl font-bold text-charcoal mb-6">استشارة تنفيذية حصرية</h4>
+                    <p class="text-xl text-steel mb-12 leading-relaxed max-w-3xl mx-auto">
+                        احجز جلسة استشارية مخصصة مع فريق الخبراء المتخصصين لدينا واحصل على رؤى استثمارية متقدمة ومخصصة لاحتياجاتك الفردية والمؤسسية
+                    </p>
+                    
+                    <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+                        <button class="consultation-trigger authority-button text-xl px-16 py-6">
+                            احجز استشارتك التنفيذية المجانية
+                        </button>
+                        <div class="text-steel">
+                            <div class="font-semibold">متاح الآن</div>
+                            <div class="text-sm">جلسات حصرية محدودة</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-steel text-sm">
+                    إشعار هام: جميع خدماتنا استشارية وتعليمية حصرياً. الاستثمار في الأسواق المالية يحمل مخاطر مالية كبيرة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure -->
+    <section class="py-20 bg-red-50 mx-8 mr-30 rounded my-12">
+        <div class="premium-container px-8">
+            <div class="executive-panel border-red-200 p-12 rounded">
+                <div class="text-center mb-12">
+                    <div class="w-24 h-24 bg-red-500 rounded flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white text-3xl">⚠️</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-red-600">إفصاح المخاطر والمسؤوليات التنظيمية</h3>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 text-steel">
+                    <div class="space-y-6">
+                        <div class="bg-red-50 p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-lg">طبيعة الخدمات المقدمة</h4>
+                            <p class="leading-relaxed">جميع خدماتنا استشارية وتعليمية حصرياً ولا تشكل نصائح استثمارية مباشرة أو توصيات مالية للشراء أو البيع أو الاحتفاظ بأي أوراق مالية.</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-lg">المخاطر المالية الجوهرية</h4>
+                            <p class="leading-relaxed">الاستثمار في الأسواق المالية والأدوات المالية المختلفة يحمل مخاطر عالية وكبيرة قد تؤدي إلى خسائر مالية جسيمة تصل إلى كامل رأس المال المستثمر وأكثر.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-red-50 p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-lg">المسؤولية الشخصية الكاملة</h4>
+                            <p class="leading-relaxed">العميل والمستخدم يتحمل المسؤولية الكاملة والشخصية عن جميع قراراته الاستثمارية والمالية ونتائجها وتبعاتها دون أي استثناء.</p>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded">
+                            <h4 class="font-bold text-red-600 mb-3 text-lg">عدم وجود ضمانات مالية</h4>
+                            <p class="leading-relaxed">لا نقدم أي ضمانات أو تعهدات أو وعود حول الأرباح المستقبلية أو نتائج الاستثمار أو أداء الأسواق أو أي عوائد استثمارية مستقبلية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Footer -->
+    <footer class="bg-charcoal py-20 mr-22">
+        <div class="premium-container px-8">
+            <div class="grid lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-6 space-x-reverse mb-8">
+                        <div class="w-20 h-20 bg-copper rounded flex items-center justify-center text-ivory">
+                            <span class="font-black text-2xl">TFA</span>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-black text-ivory">مؤسسة التحليل المالي</h3>
+                            <p class="text-platinum font-medium">PROFESSIONAL FINANCIAL ANALYSIS INSTITUTE</p>
+                        </div>
+                    </div>
+                    <p class="text-xl text-platinum leading-relaxed mb-8">
+                        نقدم خدمات استشارية وتعليمية متطورة ومتخصصة في مجال الأسواق المالية والاستثمار المؤسسي. جميع خدماتنا مخصصة للأغراض التعليمية والإعلامية حصرياً ولا تشكل نصائح استثمارية مباشرة.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <button class="consultation-trigger authority-button">
+                            استشارة فورية
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-xl text-copper uppercase tracking-wider">خدماتنا المتخصصة</h4>
+                    <ul class="space-y-4 text-platinum">
+                        <li class="hover:text-copper transition-colors cursor-pointer">التحليل التقني المتقدم</li>
+                        <li class="hover:text-copper transition-colors cursor-pointer">البرامج التعليمية التنفيذية</li>
+                        <li class="hover:text-copper transition-colors cursor-pointer">الاستشارات الاستراتيجية</li>
+                        <li class="hover:text-copper transition-colors cursor-pointer">التحليل المؤسسي الشامل</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-xl text-copper uppercase tracking-wider">المعلومات القانونية</h4>
+                    <ul class="space-y-4 text-platinum">
+                        <li><a href="ys.html" class="hover:text-copper transition-colors">سياسة الخصوصية والأمان</a></li>
+                        <li><a href="#" class="hover:text-copper transition-colors">شروط الاستخدام والخدمة</a></li>
+                        <li><a href="#" class="hover:text-copper transition-colors">إخلاء المسؤولية الكامل</a></li>
+                        <li><a href="#" class="hover:text-copper transition-colors">إفصاح المخاطر التنظيمي</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-steel pt-12 text-center">
+                <p class="text-platinum mb-6 text-lg">&copy; 2025 مؤسسة التحليل المالي الاحترافي. جميع الحقوق محفوظة قانونياً.</p>
+                <div class="flex justify-center space-x-12 space-x-reverse text-sm uppercase tracking-wider">
+                    <a href="ys.html" class="text-copper hover:text-ivory transition-colors font-semibold">الخصوصية</a>
+                    <a href="#" class="text-copper hover:text-ivory transition-colors font-semibold">الشروط</a>
+                    <a href="#" class="text-copper hover:text-ivory transition-colors font-semibold">المسؤولية</a>
+                    <a href="#" class="text-copper hover:text-ivory transition-colors font-semibold">المخاطر</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
